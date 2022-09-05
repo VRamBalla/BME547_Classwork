@@ -1,2 +1,3 @@
-# BME547_Classwork
-BME547 Medical Software Design Classwork
+# Patient Health Database
+
+Author: Ramana Balla
