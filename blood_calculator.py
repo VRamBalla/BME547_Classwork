@@ -61,6 +61,13 @@ def input_chol():
     chol_input = input("Enter the Cholesterol value:")
     return int(chol_input)
     
+def check_chol(z):
+    if z >= 240:
+        return "High"
+    elif 200 <= z <= 239:
+        return "Borderline high"
+    else:
+        return "Normal"
 
 interface()
 
