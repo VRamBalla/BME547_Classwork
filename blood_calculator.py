@@ -68,6 +68,14 @@ def check_chol(z):
         return "Borderline high"
     else:
         return "Normal"
+        
+def chol_driver():
+    chol_value = chol_LDL()
+    answer2 = check_chol(chol_value)
+    output_chol_result(chol_value, answer2)
+
+def output_chol_result(chol_value, charac2):
+    print("The results for an Cholesterol value of {} is {}".format(chol_value, charac2))
 
 interface()
 
