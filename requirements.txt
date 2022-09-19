@@ -1,2 +1,5 @@
 jupyter
+pytest
+pytest-pycodestyle
+
 
