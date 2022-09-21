@@ -26,7 +26,7 @@ def input_HDL():
 def check_HDL(x):
     if x >= 60:
         return "Normal"
-    elif 40<= x < 60:
+    elif 40 <= x < 60:
         return "Borderline Low"
     else:
         return "Low"
@@ -39,7 +39,7 @@ def HDL_driver():
 
 
 def output_HDL_result(hdl_value, charac):
-    print("The results for an HDL value of {} is {}".format(hdl_value, charac)
+    print("The results for an HDL value of {} is {}".format(hdl_value, charac))
 
 
 def input_LDL():
@@ -65,7 +65,8 @@ def LDL_driver():
 
 
 def output_LDL_result(ldl_value, charac1):
-    print("The results for an LDL value of {} is {}".format(ldl_value, charac1))
+    print("The results for an LDL value of {} is {}"
+          .format(ldl_value, charac1))
 
 
 def input_chol():
@@ -89,9 +90,9 @@ def chol_driver():
 
 
 def output_chol_result(chol_value, charac2):
-    print("The results for an Cholesterol value of {} is {}".format(chol_value, charac2))
+    print("The results for an Cholesterol value of {} is {}"
+          .format(chol_value, charac2))
 
 
 if __name__ == "__main__":
     interface()
-
