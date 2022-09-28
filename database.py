@@ -6,15 +6,15 @@ class Patient:
         self.patient_id = patient_id
         self.age = age
         self.tests = []
-    
-    
-    def full_name(self):
-        return "{} {}".format(self.first_name, self.last_name)
 
 
-def create_patient_entry(patient_first_name, 
+def full_name(self):
+    return "{} {}".format(self.first_name, self.last_name)
+
+
+def create_patient_entry(patient_first_name,
                          patient_last_name,
-                         patient_id, 
+                         patient_id,
                          patient_age):
     new_patient = Patient(patient_first_name,
                           patient_last_name, patient_id,
@@ -25,10 +25,11 @@ def create_patient_entry(patient_first_name,
 def output(db):
     for patient_key in db:
         print(patient_key)
-        print("Name: {}, ID: {}, Age: {} \n".format(get_full_name(db[patient_key]),
-                                                    db[patient_key]["ID"],
-                                                    db[patient_key]["Age"]))
-    
+        print("Name: {}, ID: {}, Age: {} \n"
+              .format(get_full_name(db[patient_key]),
+                      db[patient_key]["ID"],
+                      db[patient_key]["Age"]))
+
     for patient_key, patient in zip(db.keys(), db.values()):
         print(patient_key)
         print("Name: {}, ID: {}, Age: {} \n".format(get_full_name(patient),
@@ -50,6 +51,7 @@ def add_test_results(db, id_no, test_name, test_value):
     patient = search_db(db, id_no)
     patient["Tests"].append([test_name, test_value])
 
+
 def adult_or_minor(patient):
     if patient["Age"] >= 18:
         return "adult"
@@ -63,7 +65,7 @@ def main():
     x.last_name = "Balla"
     print(x.full_name())
     exit()
-    
+
     db = {}
     db[11] = create_patient_entry("Ann", "Ables", 11, 30)
     db[22] = create_patient_entry("Bob", "Boyles", 22, 34)
@@ -71,8 +73,8 @@ def main():
     output(db)
     add_test_results(db, 3, "HDL", 100)
     output(db)
-    #print("Patient {} is a {}".format(get_full_name(db[2]),
-     #                                 adult_or_minor(db[2])))
+# print("Patient {} is a {}".format(get_full_name(db[2]),
+#                                 adult_or_minor(db[2])))
 
 
 if __name__ == "__main__":
