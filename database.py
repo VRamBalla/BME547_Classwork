@@ -11,11 +11,17 @@ def create_patient_entry(patient_first_name,
 
 
 def output(db):
-    for patient in db:
-        print(patient)
-        print("Name: {}, ID: {}, Age: {} \n".format(get_full_name(db[patient]), 
-                                                    db[patient]["ID"], 
-                                                    db[patient]["Age"]))
+    for patient_key in db:
+        print(patient_key)
+        print("Name: {}, ID: {}, Age: {} \n".format(get_full_name(db[patient_key]),
+                                                    db[patient_key]["ID"],
+                                                    db[patient_key]["Age"]))
+    
+    for patient_key, patient in zip(db.keys(), db.values()):
+        print(patient_key)
+        print("Name: {}, ID: {}, Age: {} \n".format(get_full_name(patient),
+                                                    patient["ID"],
+                                                    patient["Age"]))
 
 
 def get_full_name(patient):
