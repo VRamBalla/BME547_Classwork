@@ -6,7 +6,10 @@ def function_name():
 
 
 def main():
-    function_name()
+    try:
+        function_name()
+    except ZeroDivisionError:
+        print("zero in denominator, not valid")
 
 
 if __name__ == "__main__":
