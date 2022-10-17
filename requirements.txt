@@ -1,3 +1,4 @@
+requests
 jupyter
 pytest
 pytest-pycodestyle
