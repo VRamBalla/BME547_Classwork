@@ -1,6 +1,7 @@
 requests
 jupyter
-pytest
+pytest==7.1.3
 pytest-pycodestyle
+flask
 
 
