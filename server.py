@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+
 @app.route("/", methods=["GET"])
 def server_status():
     return "Server is on."
@@ -40,6 +41,7 @@ def add_numbers():
     a = in_data["a"]
     b = in_data["b"]
     return jsonify(a+b)
+
 
 if __name__ == "__main__":
     app.run()
